@@ -1,6 +1,6 @@
 Frontend:
 
-- Login plataforma
+- Login plataforma *esto ya quedo*
 - Login recuperar contraseña
 - Pantalla empleados [modal para solicitar permisos]
 - Pantalla jefes [modal para aceptar permisos][ver todos los permiso (tipo tabla en donde se filtrara [Permiso 2 horas y Permiso económico]) y (No. Nomina, Fecha, Apellido)]
