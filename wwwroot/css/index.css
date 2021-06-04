@@ -20,6 +20,24 @@
   background-position: center;
   background-size: cover;
 }
+@media (max-width: 775px) {
+  .contenedor .contenedorcentrado {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    min-width: 380px;
+    width: 90%;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
 
 .contenerdor-center {
   margin: 20% auto;
@@ -74,12 +92,22 @@
   opacity: 1;
   filter: alpha(opacity=1);
 }
+@media (max-width: 775px) {
+  .login .login {
+    margin: 0 auto;
+  }
+}
 
 .login label {
   display: block;
   font-family: "Overpass", sans-serif;
   font-size: 120%;
   margin-top: 15px;
+}
+@media (max-width: 775px) {
+  .login label .login label {
+    text-align: left;
+  }
 }
 
 .login input {
@@ -147,9 +175,15 @@
           box-sizing: border-box;
   color: #2a628f;
 }
+@media (max-width: 775px) {
+  .derecho .derecho {
+    padding: 20px 20px 20px 20px;
+  }
+}
 
 .titulo {
   font-size: 300%;
+  color: #2a628f;
 }
 
 .logo-empresa img {
@@ -178,43 +212,6 @@ hr {
   color: #18435a;
 }
 
-/* seccion de la derecha */
-/* seccion de la derecha */
-/* ajustar a pantallas con ancho menor o igual a 775px; */
-/* ajustar a pantallas con ancho menor o igual a 775px; */
-@media all and (max-width: 775px) {
-  .contenedorcentrado {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    min-width: 380px;
-    width: 90%;
-    /*opacity: 0.50;
-
-    filter: alpha(opacity=50);*/
-    border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
-    padding: 30px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-
-  .login {
-    margin: 0 auto;
-  }
-
-  .derecho {
-    padding: 20px 20px 20px 20px;
-  }
-
-  .login label {
-    text-align: left;
-  }
-}
 .bton-ini {
   text-align: center;
   margin-top: 30px;
@@ -231,7 +228,7 @@ hr {
   /* tamaño y color de borde */
   padding: 10px;
   text-align: center;
-  width: 150px;
+  width: 220px;
   height: 50px;
   border-radius: 20px;
   /* redondear bordes */

@@ -11,6 +11,22 @@
     height: 100%;
     background-position: center;
     background-size: cover;
+
+    @media (max-width:775px) {
+        .contenedorcentrado {
+            flex-direction:column-reverse;
+            min-width: 380px;
+            width: 90%;
+            border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+            -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+            box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+            padding: 30px;
+            box-sizing: border-box;
+        }  
+    }
 }
 
 .contenerdor-center {
@@ -20,6 +36,7 @@
 .loginform{
     color: #FFF;
 }
+
 /* contenedor del login a la izquierda */
 .contenedorcentrado {
     display: flex;
@@ -55,14 +72,25 @@
     box-sizing: border-box;
     opacity: 1;
     filter: alpha(opacity=1);
+
+    @media (max-width:775px) {
+        .login {
+            margin: 0 auto;
+        }
+    }
 }
 
 .login label {
     display: block;
     font-family: 'Overpass', sans-serif;
     font-size: 120%;
-    //color:$background_letters;
     margin-top: 15px;
+
+    @media (max-width:775px) {
+        .login label {
+            text-align: left;
+        }
+    }
 }
 
 .login input {
@@ -112,11 +140,17 @@
     padding:20px 20px 20px 50px;
     box-sizing: border-box;
     color: $bajo-fuerte;
+
+    @media (max-width:775px) {
+        .derecho {
+            padding:20px 20px 20px 20px;
+        }
+    }
 }
 
 .titulo {
     font-size: 300%;
-    //color:$background_letters;
+    color: $bajo-fuerte;
 }
 
 .logo-empresa img {
@@ -127,6 +161,7 @@ hr {
     border-top: 1px solid $bajo-fuerte;
 	border-bottom: 1px solid $bajo-fuerte; 
 }
+
 .pie-form {
     font-size: 90%;
     text-align: center;    
@@ -143,54 +178,13 @@ hr {
 .pie-form a:hover {
     color: $fuerte-verdoso;
 }
-/* seccion de la derecha */
-/* seccion de la derecha */
-
-/* ajustar a pantallas con ancho menor o igual a 775px; */
-/* ajustar a pantallas con ancho menor o igual a 775px; */
-@media all and (max-width: 775px)
-{
-    .contenedorcentrado {
-        flex-direction:column-reverse;
-        min-width: 380px;
-        width: 90%;
-
-        //background-color: $leters_hover;
-
-        /*opacity: 0.50;
-
-        filter: alpha(opacity=50);*/
-
-        border-radius: 10px 10px 10px 10px;
-        -moz-border-radius: 10px 10px 10px 10px;
-        -webkit-border-radius: 10px 10px 10px 10px;
-
-        -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
-        -moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
-        box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
-
-        padding: 30px;
-        box-sizing: border-box;
-    }
-    
-    .login {
-        margin: 0 auto;
-    }
-    
-    .derecho {
-        padding:20px 20px 20px 20px;
-    }
-    
-    .login label {
-        text-align: left;
-    }
-}
 
 .bton-ini {
     text-align: center;
     margin-top: 30px;
     margin-bottom: -30px;
 }
+
 /*** ESTILOS BOTÓN GROW BOX ***/
 .ov-btn-grow-box {
     background: #fff; /* color de fondo */
@@ -198,7 +192,7 @@ hr {
     border: 2px solid $bajo; /* tamaño y color de borde */
     padding: 10px;
     text-align: center;
-    width: 150px;
+    width: 220px;
     height: 50px;
     border-radius: 20px; /* redondear bordes */
     position: relative;
@@ -207,10 +201,12 @@ hr {
     overflow: hidden;
     display: inline-block;
   }
+
   .ov-btn-grow-box:hover {
     color: #fff;/* color de fuente hover */
     text-decoration: none;
   }
+
   .ov-btn-grow-box::after {
     content: "";
     background: $bajo; /* color de fondo hover */
