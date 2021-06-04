@@ -110,7 +110,6 @@
 
 .login input::placeholder {
     font-family: 'Overpass', sans-serif;
-    //color: $backgroud_general;
 }
 
 .login button {
@@ -221,6 +220,7 @@ hr {
     transform: scale(0, 0);
     transition: all 0.3s ease;
   }
+
   .ov-btn-grow-box:hover::after {
     transition: all 0.3s ease-out;
     transform: scale(1, 1);
