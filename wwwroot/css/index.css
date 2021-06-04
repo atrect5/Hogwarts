@@ -1,6 +1,5 @@
+@charset "UTF-8";
 /* COLORS */
-/* BUTTONS */
-/* Letters */
 /* efectos para el contenedor de pantalla completa */
 .contenedor {
   display: -webkit-box;
@@ -18,13 +17,16 @@
   min-height: 100vh;
   width: 100%;
   height: 100%;
-  background-image: url("../lib/img/fondo_difuminado_login.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .contenerdor-center {
   margin: 20% auto;
+}
+
+.loginform {
+  color: #FFF;
 }
 
 /* contenedor del login a la izquierda */
@@ -44,7 +46,7 @@
           flex-direction: row;
   min-width: 380px;
   width: 100%;
-  background-color: #16324F;
+  background-color: #F6F6F7;
   border-radius: 10px 10px 10px 10px;
   -moz-border-radius: 10px 10px 10px 10px;
   -webkit-border-radius: 10px 10px 10px 10px;
@@ -61,7 +63,7 @@
   max-width: 320px;
   min-width: 320px;
   padding: 30px 30px 50px 30px;
-  background-color: #18435a;
+  background-color: #2a628f;
   -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.15);
   border-radius: 3px 3px 3px 3px;
@@ -77,7 +79,6 @@
   display: block;
   font-family: "Overpass", sans-serif;
   font-size: 120%;
-  color: #B8BEC4;
   margin-top: 15px;
 }
 
@@ -99,27 +100,22 @@
 
 .login input::-webkit-input-placeholder {
   font-family: "Overpass", sans-serif;
-  color: #16324F;
 }
 
 .login input::-moz-placeholder {
   font-family: "Overpass", sans-serif;
-  color: #16324F;
 }
 
 .login input:-ms-input-placeholder {
   font-family: "Overpass", sans-serif;
-  color: #16324F;
 }
 
 .login input::-ms-input-placeholder {
   font-family: "Overpass", sans-serif;
-  color: #16324F;
 }
 
 .login input::placeholder {
   font-family: "Overpass", sans-serif;
-  color: #16324F;
 }
 
 .login button {
@@ -132,12 +128,12 @@
   border-radius: 3px 3px 3px 3px;
   -moz-border-radius: 3px 3px 3px 3px;
   -webkit-border-radius: 3px 3px 3px 3px;
-  background-color: #2a628f;
+  background-color: #3e92cc;
   margin-top: 10px;
 }
 
 .login button:hover {
-  background-color: #3e92cc;
+  background-color: #18435a;
   color: #FFF;
 }
 
@@ -149,11 +145,11 @@
   padding: 20px 20px 20px 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  color: #2a628f;
 }
 
 .titulo {
   font-size: 300%;
-  color: #B8BEC4;
 }
 
 .logo-empresa img {
@@ -161,8 +157,8 @@
 }
 
 hr {
-  border-top: 1px solid #B8BEC4;
-  border-bottom: 1px solid #B8BEC4;
+  border-top: 1px solid #2a628f;
+  border-bottom: 1px solid #2a628f;
 }
 
 .pie-form {
@@ -174,12 +170,12 @@ hr {
 .pie-form a {
   display: block;
   text-decoration: none;
-  color: #B8BEC4;
+  color: #2a628f;
   margin-bottom: 3px;
 }
 
 .pie-form a:hover {
-  color: #FFF;
+  color: #18435a;
 }
 
 /* seccion de la derecha */
@@ -194,8 +190,8 @@ hr {
             flex-direction: column-reverse;
     min-width: 380px;
     width: 90%;
-    background-color: #18435a;
     /*opacity: 0.50;
+
     filter: alpha(opacity=50);*/
     border-radius: 10px 10px 10px 10px;
     -moz-border-radius: 10px 10px 10px 10px;
@@ -219,5 +215,61 @@ hr {
     text-align: left;
   }
 }
-/* ajustar a pantallas con ancho menor o igual a 775px; */
-/* ajustar a pantallas con ancho menor o igual a 775px; */
+.bton-ini {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: -30px;
+}
+
+/*** ESTILOS BOTÓN GROW BOX ***/
+.ov-btn-grow-box {
+  background: #fff;
+  /* color de fondo */
+  color: #3e92cc;
+  /* color de fuente */
+  border: 2px solid #3e92cc;
+  /* tamaño y color de borde */
+  padding: 10px;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  /* redondear bordes */
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.ov-btn-grow-box:hover {
+  color: #fff;
+  /* color de fuente hover */
+  text-decoration: none;
+}
+
+.ov-btn-grow-box::after {
+  content: "";
+  background: #3e92cc;
+  /* color de fondo hover */
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.ov-btn-grow-box:hover::after {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
